@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1446667744 source:c:\users\usuario\desktop\tp2-parrondosanpedro\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1504958766 source:c:\users\usuario\desktop\tp2-parrondosanpedro\matriz.c
+	"matriz.h"
+
+1504958794 c:\users\usuario\desktop\tp2-parrondosanpedro\matriz.h
+
+1509641758 source:c:\users\usuario\desktop\tp2-parrondosanpedro\caja.c
+
+1509641722 source:c:\users\usuario\desktop\tp2-parrondosanpedro\fila.c
+
+1509726446 source:c:\users\usuario\desktop\tp2-parrondosanpedro\arbol.c
+	"arbol.h"
+	"string.h"
+
+1509725873 c:\users\usuario\desktop\tp2-parrondosanpedro\arbol.h
+	"persona.h"
+
+1509727042 c:\users\usuario\desktop\tp2-parrondosanpedro\persona.h
+
