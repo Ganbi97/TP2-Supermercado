@@ -53,7 +53,7 @@ void mostrarTC(persona p)
     }
     else
     {
-        printf("Cliente Comun")
+        printf("Cliente Comun");
     }
 }
 

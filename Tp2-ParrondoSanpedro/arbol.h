@@ -17,6 +17,9 @@ nodoArbol* insertarNodoArbol(nodoArbol*arbol,persona per);
 void mostrarArbolPostO(nodoArbol* arbol);
 void mostrarArbolInO(nodoArbol* arbol);
 void mostrarArbolPreO(nodoArbol* arbol);
+nodoArbol* borrarUnNodoArbol(nodoArbol* arbol,char dato[40]);
+nodoArbol* nodomasizquierda(nodoArbol* arbol);
+nodoArbol* nodomasderecha(nodoArbol* arbol);
 /*
 inicArbol
 crearNodoArbol
