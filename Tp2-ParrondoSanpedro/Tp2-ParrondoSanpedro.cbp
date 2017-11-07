@@ -31,9 +31,29 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="arbol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="arbol.h" />
+		<Unit filename="caja.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="caja.h" />
+		<Unit filename="fila.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fila.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="matriz.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="matriz.h" />
+		<Unit filename="persona.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="persona.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

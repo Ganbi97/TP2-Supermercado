@@ -1,4 +1,6 @@
 #include "persona.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 persona crearPersona()
 {
@@ -20,7 +22,7 @@ persona crearPersona()
     scanf("%d",&aux.medioPago);
     printf("\nIngrese el id(DNI): ");
     scanf("%d",&aux.id);
-    return persona;
+    return aux;
 }
 
 void mostrarMP(persona p)
@@ -57,8 +59,7 @@ void mostrarTC(persona p)
     }
 }
 
-void mostrarPersona(persona p)            ///flechitas o puntitos?
-{
+void mostrarPersona(persona p)
     printf("-------------------------------------\n");
     printf("\nNombre: %s %s",p.nombres,p.apellido);
     printf("\nId: %d",p.id);
