@@ -60,6 +60,7 @@ void mostrarTC(persona p)
 }
 
 void mostrarPersona(persona p)
+{
     printf("-------------------------------------\n");
     printf("\nNombre: %s %s",p.nombres,p.apellido);
     printf("\nId: %d",p.id);
