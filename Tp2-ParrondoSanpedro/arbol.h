@@ -21,12 +21,12 @@ nodoArbol* borrarUnNodoArbol(nodoArbol* arbol,char dato[40]);
 nodoArbol* nodomasizquierda(nodoArbol* arbol);
 nodoArbol* nodomasderecha(nodoArbol* arbol);
 /*
-inicArbol
-crearNodoArbol
-insertarNodoArbol (ordenado por nombre o apellido)
-mostrarArbol  (recorriendo inOrder, postOrder, preOrder)
-borrarUnNodoArbol (buscarlo por nombre o apellido)
-pasarDeArbolToLineaDeCajas (recorriendo inOrder, postOrder, preOrder)
+void pasarDeArbolToLineaDeCajas(nodoArbol*arbol,caja cajero[]);
+void pasarpreorder(nodoArbol* arbol,caja cajero[]);
+void  pasarinorder(nodoArbol* arbol,caja cajero[]);
+void  pasarpostorder(nodoArbol* arbol,caja cajero[]);
+void addtocaja(persona p,caja cajero[]);
+int cajacorrecta(persona p,caja cajero[],int i);
 */
 
 

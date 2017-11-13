@@ -1,5 +1,6 @@
 #include "arbol.h"
 #include "string.h"
+#include "fila.h"
 
 nodoArbol*inicArbol()
 {
@@ -117,3 +118,93 @@ nodoArbol* nodomasizquierda(nodoArbol* arbol)
     }
           return aux;
 }
+/*
+void pasarDeArbolToLineaDeCajas(nodoArbol*arbol,caja cajero[])
+{
+    int eleccion=0;
+    printf("\nElija como se pasaran:\n1.Preorder\n2.Inorder\n3.Postorder\n");
+    scanf("%d",&eleccion);
+    switch(eleccion)
+    {
+        case 1:
+        pasarpreorder(arbol,cajero);
+        break;
+        case 2:
+        pasarinorder(arbol,cajero);
+        break;
+        case 3:
+        pasarpostorder(arbol,cajero);
+        break;
+    }
+}
+
+void pasarpreorder(nodoArbol* arbol,caja cajero[])
+{
+        if(arbol)
+    {
+        addtocaja(arbol->p,cajero);
+        pasarpreorder(arbol->izq,cajero);
+        pasarpreorder(arbol->der,cajero);
+    }
+}
+
+void  pasarinorder(nodoArbol* arbol,caja cajero[])
+{
+    if(arbol)
+    {
+        pasarinorder(arbol->izq,cajero);
+        addtocaja(arbol->p,cajero);
+        pasarinorder(arbol->der,cajero);
+    }
+}
+
+void  pasarpostorder(nodoArbol* arbol,caja cajero[])
+{
+    if(arbol)
+    {
+        pasarpostorder(arbol->izq,cajero);
+        pasarpostorder(arbol->der,cajero);
+        addtocaja(arbol->p,cajero);
+    }
+}
+
+void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
+{
+    int i=0;
+    int a=7;
+    int flag=0;
+    int metido=0;
+    while(i<7&&metido==0)
+    {
+        if(FilaVacia(&cajero[i].filita)==1||cajacorrecta(p,cajero,i)==1)
+        {
+            flag=i;
+            metido=1;
+        }
+        else if(cajacorrecta(p,cajero,i)==1)
+        {
+            flag=agarrarmenor(flag,cajero,i);
+        }
+        i++;
+    }
+    cajero[flag]=agregarClienteACaja(cajero,p,flag);
+}
+
+int cajacorrecta(persona p,caja cajero[],int i)
+{
+    int resultado=0;
+    if(cajero[i].tipo_pago==p.tipo_pago)
+    {
+        resultado=1;
+    }
+    else if(cajero[i].tipo_pago==3&&p.tipo_pago==3)
+    {
+        resultado=1;
+    }
+    if(cajero[i].abiertaOcerrada==0)
+    {
+        resultado=0;
+    }
+    return resultado;
+}
+*/

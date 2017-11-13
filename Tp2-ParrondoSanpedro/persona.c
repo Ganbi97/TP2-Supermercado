@@ -14,12 +14,12 @@ persona crearPersona()
     printf("\nIngrese apellido de la persona: ");
     fflush(stdin);
     scanf("%s",&aux.apellido);
-    printf("\nIngrese tipo de cliente: ");                ///Arreglarlo para que solo se ingrese 1 2 o 3
-    scanf("%d",&aux.tipoCliente);
+    printf("\nTipo de cliente\n(1)Embarazada\n(2)Jubilado\n(3)Cliente comun\n");                ///Arreglarlo para que solo se ingrese 1 2 o 3
+    aux.tipoCliente=solo3opciones();
     printf("\nIngrese cantidad de articulos: ");
     scanf("%d",&aux.cantArticulos);
-    printf("\nIngrese medio de pago: ");
-    scanf("%d",&aux.medioPago);
+    printf("\nMedio de pago\n(1)efectivo\n(2)Credito\n(3)Todos\n");
+    aux.medioPago=solo3opciones();
     printf("\nIngrese el id(DNI): ");
     scanf("%d",&aux.id);
     return aux;
@@ -70,4 +70,21 @@ void mostrarPersona(persona p)
     mostrarMP(p);
     printf("\nCantidad de articulos: %d",p.cantArticulos);
     printf("\n-------------------------------------");
+}
+
+int solo3opciones()
+{
+    int opcion=0;
+    int verificar=0;
+    while(verificar==0)
+    {
+        printf("Ingrese una opcion correcta(1/2/3): ");
+        scanf("%d",&opcion);
+        if(opcion==1&&opcion==2&&opcion==3)
+        {
+            verificar=1;
+        }
+        system("cls");
+    }
+    return opcion;
 }
