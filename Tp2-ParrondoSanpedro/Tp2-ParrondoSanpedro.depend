@@ -21,29 +21,33 @@
 
 1509727042 c:\users\usuario\desktop\tp2-parrondosanpedro\persona.h
 
-1509641758 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\caja.c
+1510076712 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\caja.c
 
-1509641722 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\fila.c
+1510616873 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\fila.c
+	"Fila.h"
+	"persona.h"
+	"lista.h"
 
-1446667744 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\main.c
+1510076712 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\main.c
 	<stdio.h>
 	<stdlib.h>
 
-1504958766 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\matriz.c
+1510076712 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\matriz.c
 	"matriz.h"
 
-1504958794 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\matriz.h
+1510076712 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\matriz.h
 
-1510091163 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\arbol.c
+1510334022 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\arbol.c
 	"arbol.h"
 	"string.h"
+	"fila.h"
 
-1510090932 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\arbol.h
+1510334022 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\arbol.h
 	"persona.h"
 
-1510092576 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\persona.h
+1510076712 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\persona.h
 
-1510093406 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\persona.c
+1510160552 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\persona.c
 	"persona.h"
 	<stdio.h>
 	<stdlib.h>
@@ -81,4 +85,15 @@
 	"persona.h"
 	<stdio.h>
 	<stdlib.h>
+
+1510616857 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\fila.h
+	"lista.h"
+
+1510613853 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\lista.h
+	"persona.h"
+	<stdio.h>
+	<stdlib.h>
+
+1510616509 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2-parrondosanpedro\lista.c
+	"lista.h"
 

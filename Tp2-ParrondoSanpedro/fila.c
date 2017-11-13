@@ -1,174 +1,68 @@
-#include "fila.h"
+#include "Fila.h"
+#include "persona.h"
+#include "lista.h"
 
-nodo*iniclista()
+Fila inicFila(Fila Filanueva)
 {
-    return NULL;
+    Filanueva.inicio=inicLista();
+    Filanueva.fin=inicLista();
+    return Filanueva;
 }
 
-nodo*crearNodolista(persona p)
+int FilaVacia(Fila*filita)
 {
-    nodo*aux=(nodo*)malloc(sizeof(nodo));
-    aux->anterior=NULL;
-    aux->siguiente=NULL;
-    aux->cliente=p;
-    return aux;
+    int resultado=0;
+    if(!filita->inicio)
+        resultado=1;
+    return resultado;
 }
 
-nodo*agregarAlPrincipio(nodo*lista,nodo*nuevo)
+void agregar(Fila* filita,nodo* nuevonodo)
 {
-    nuevo->siguiente=lista;
-    if(lista)
+    if(!filita->inicio)
     {
-        lista->anterior=nuevo;
-    }
-    return nuevo;
-}
-
-nodo*agregarAlFinal(nodo*lista,nodo*nuevo)
-{
-    //
-    nodo*ultimo=NULL;
-    if(!lista)
-    {
-        lista=nuevo;
+        filita->inicio=nuevonodo;
     }
     else
     {
-        ultimo=buscarElUltimo(lista);
-        ultimo->siguiente=nuevo;
-        nuevo->anterior=ultimo;
+        filita->inicio=agregarAlFinal(filita->inicio,nuevonodo);
     }
-    return lista;
+    filita->fin=nuevonodo;
 }
 
-nodo*buscarElUltimo(nodo* lista)
-{
-    nodo*seguidora=lista;
-    if(lista)
-    {
-        while(seguidora->siguiente!=NULL)
-        {
-            seguidora=seguidora->siguiente;
-        }
-    }
-    return seguidora;
-}
 
-nodo* agregarEnOrdenTipoCliente(nodo* lista,nodo* nuevo)
+persona quitar(Fila * filita)
 {
-    if(!lista)
-        lista=nuevo;
-        else
+    persona a;
+    if(filita->inicio)
     {
-        if((nuevo->cliente.tipoCliente) < (lista->cliente.tipoCliente))
+        nodo * aux=filita->inicio;
+        nodo * sig=aux->siguiente;
+        if(filita->inicio != filita->fin)
         {
-            lista=agregarAlPrincipio(lista,nuevo);
+            sig->anterior=NULL;
+            filita->inicio=sig;
         }
         else
         {
-            nodo * seg = lista->siguiente;//seguidora
-            nodo * ante = lista;
-            while((seg) && (nuevo->cliente.tipoCliente > seg->cliente.tipoCliente))
-            {
-                ante=seg;
-                seg=seg->siguiente;
-            }
-            ante->siguiente=nuevo;
-            nuevo->anterior=ante;
-            nuevo->siguiente=seg;
-            if(seg) seg->anterior=nuevo;
+            filita->inicio=NULL;
+            filita->fin=NULL;
         }
-    }
-    return lista;
-}
-
-nodo* agregarEnOrdenPorCantidadP(nodo* lista,nodo* nuevo)
-{
-        if(!lista) lista=nuevo;
-    else
-    {
-        if((nuevo->cliente.cantArticulos) < (lista->cliente.cantArticulos))
-        {
-            lista=agregarAlPrincipio(lista,nuevo);
-        }
-        else
-        {
-            nodo * seg = lista->siguiente;
-            nodo * ante = lista;
-            while((seg) && (nuevo->cliente.cantArticulos > seg->cliente.cantArticulos))
-            {
-                ante=seg;
-                seg=seg->siguiente;
-            }
-            ante->siguiente=nuevo;
-            nuevo->anterior=ante;
-            nuevo->siguiente=seg;
-            if(seg) seg->anterior=nuevo;
-        }
-    }
-    return lista;
-}
-
-void mostrarlista(nodo* lista)
-{
-    nodo * seg=lista;
-    while(seg)
-    {
-        mostrarPersona(seg->cliente);
-        seg=seg->siguiente;
-    }
-}
-
-int contarlista(nodo* lista)
-{
-    nodo * seg=lista;
-    int i=0;
-    while(seg)
-    {
-        i++;
-        seg=seg->siguiente;
-    }
-    return i;
-}
-
-nodo * borrarNodo(nodo* lista,char nombre[])
-{
-    nodo * seg;
-    nodo * ante;
-    if((lista) && strcmp(lista->cliente.nombres,nombre) ==0)
-    {
-        nodo * aux=lista;
-        lista=lista->siguiente;
+        a=aux->cliente;
         free(aux);
-        lista->anterior=NULL;
+    }
+    return a;
+}
 
+void mostrarFila(Fila *filita)
+{
+    if(filita->inicio)
+    {
+        nodo* aux=filita->inicio;
+        mostrarLista(aux);
     }
     else
     {
-        seg=lista;
-        while((seg) && (strcmp(seg->cliente.nombres,nombre) != 0 ))
-        {
-            ante=seg;
-            seg=seg->siguiente;
-        }
-        if(seg)
-        {
-            ante->siguiente=seg->siguiente;
-            seg->anterior=ante;
-            free(seg);
-        }
+        printf("404 not found: La Fila esta vacia \n");
     }
-    return lista;
-}
-
-nodo * borrarPrimero(nodo * lista)
-{
-    if(lista)
-    {
-        nodo* aux=lista;
-        lista=lista->siguiente;
-        free(aux);
-        lista->anterior=NULL;
-    }
-    return lista;
 }

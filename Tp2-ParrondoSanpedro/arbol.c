@@ -1,6 +1,7 @@
 #include "arbol.h"
 #include "string.h"
 #include "fila.h"
+#include "caja.h"
 
 nodoArbol*inicArbol()
 {
@@ -118,13 +119,13 @@ nodoArbol* nodomasizquierda(nodoArbol* arbol)
     }
           return aux;
 }
-/*
+
 void pasarDeArbolToLineaDeCajas(nodoArbol*arbol,caja cajero[])
 {
     int eleccion=0;
     printf("\nElija como se pasaran:\n1.Preorder\n2.Inorder\n3.Postorder\n");
     scanf("%d",&eleccion);
-    switch(eleccion)
+    /*switch(eleccion)
     {
         case 1:
         pasarpreorder(arbol,cajero);
@@ -135,10 +136,10 @@ void pasarDeArbolToLineaDeCajas(nodoArbol*arbol,caja cajero[])
         case 3:
         pasarpostorder(arbol,cajero);
         break;
-    }
+    }*/
 }
 
-void pasarpreorder(nodoArbol* arbol,caja cajero[])
+/*void pasarpreorder(nodoArbol* arbol,caja cajero[])
 {
         if(arbol)
     {
@@ -166,9 +167,9 @@ void  pasarpostorder(nodoArbol* arbol,caja cajero[])
         pasarpostorder(arbol->der,cajero);
         addtocaja(arbol->p,cajero);
     }
-}
+}*/
 
-void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
+/*void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
 {
     int i=0;
     int a=7;
@@ -187,17 +188,17 @@ void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
         }
         i++;
     }
-    cajero[flag]=agregarClienteACaja(cajero,p,flag);
-}
+    cajero[flag]=agregarClienteACaja(cajero,p,flag); ////////////////////////////////////////////< this
+}*/
 
 int cajacorrecta(persona p,caja cajero[],int i)
 {
     int resultado=0;
-    if(cajero[i].tipo_pago==p.tipo_pago)
+    if(cajero[i].tipo_pago==p.medioPago)
     {
         resultado=1;
     }
-    else if(cajero[i].tipo_pago==3&&p.tipo_pago==3)
+    else if(cajero[i].tipo_pago==3&&p.medioPago==3)
     {
         resultado=1;
     }
@@ -207,4 +208,3 @@ int cajacorrecta(persona p,caja cajero[],int i)
     }
     return resultado;
 }
-*/
