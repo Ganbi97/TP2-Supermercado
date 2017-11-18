@@ -14,7 +14,9 @@ typedef struct {
 } persona;
 
 persona crearPersona();
-int solo3opciones(); //funcion que no permite que se ingrese otra cosa que no sea 1, 2 o 3 sirve tanto para tipo de cliente como para medio de pago
+void addarchivepersona(char ubicacion[15])
+void seearchive(char ubicacion[15])
+int solo3opciones();//funcion que no permite que se ingrese otra cosa que no sea 1, 2 o 3 sirve tanto para tipo de cliente como para medio de pago
 void mostrarPersona(persona p);
 void mostrarMP(persona p);
 void mostrarTC(persona p);

@@ -2,6 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void addarchivepersona(char ubicacion[15])
+{
+    FILE*archi=fopen(ubicacion,"ab");
+    char preguntar='s';
+    persona aux;
+    if (archi!=NULL)
+    {
+        while(preguntar=='s')
+        {
+            aux=crearPersona();
+            fwrite(&aux,sizeof(persona),1,archi);
+            system("cls");
+            printf("\nDesea cargar otra persona?<s/n>: ");
+            fflush(stdin);
+            scanf("%c",&preguntar);
+        }
+    }
+    fclose(archi);
+}
+
 persona crearPersona()
 {
     persona aux;
@@ -23,6 +43,22 @@ persona crearPersona()
     printf("\nIngrese el id(DNI): ");
     scanf("%d",&aux.id);
     return aux;
+}
+
+int solo3opciones()
+{
+    int p;
+    scanf("%d",&p);
+    if(p<1||p>3)
+    {
+        while(p<1||p>3)
+        {
+            printf("\nIngrese una opcion valida(1/2/3): ");
+            fflush(stdin);
+            scanf("%d",&p);
+        }
+    }
+    return p;
 }
 
 void mostrarMP(persona p)
@@ -72,19 +108,16 @@ void mostrarPersona(persona p)
     printf("\n-------------------------------------");
 }
 
-int solo3opciones()
+
+void seearchive(char ubicacion[15])
 {
-    int opcion=0;
-    int verificar=0;
-    while(verificar==0)
+    FILE*archi=fopen(ubicacion,"rb");
+    persona aux;
+    if (archi!=NULL)
     {
-        printf("Ingrese una opcion correcta(1/2/3): ");
-        scanf("%d",&opcion);
-        if(opcion==1&&opcion==2&&opcion==3)
-        {
-            verificar=1;
-        }
-        system("cls");
+        while(fread(&aux,sizeof(persona),1,archi)!=0)
+            mostrarPersona(aux);
     }
-    return opcion;
+    fclose(archi);
+    system("pause");
 }
