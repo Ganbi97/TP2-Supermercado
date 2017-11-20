@@ -169,10 +169,9 @@ void  pasarpostorder(nodoArbol* arbol,caja cajero[])
     }
 }
 
-void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
+void addtocaja(persona p,caja cajero[])
 {
     int i=0;
-    int a=7;
     int flag=0;
     int metido=0;
     while(i<7&&metido==0)

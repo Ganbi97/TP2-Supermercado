@@ -75,16 +75,16 @@ void mostrarPersona(persona p)
 int solo3opciones()
 {
     int opcion=0;
-    int verificar=0;
-    while(verificar==0)
+    fflush(stdin);
+    scanf("%d",&opcion)
+    if(opcion<1||opcion>3)
     {
-        printf("Ingrese una opcion correcta(1/2/3): ");
-        scanf("%d",&opcion);
-        if(opcion==1&&opcion==2&&opcion==3)
+        while(opcion<1||opcion>3)
         {
-            verificar=1;
+        printf("Ingrese una opcion correcta(1/2/3): ");
+        fflush(stdin);
+        scanf("%d",&opcion);
         }
-        system("cls");
     }
     return opcion;
 }
