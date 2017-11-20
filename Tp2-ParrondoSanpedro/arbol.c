@@ -1,6 +1,7 @@
 #include "arbol.h"
 #include "string.h"
 #include "fila.h"
+#include "caja.h"
 
 nodoArbol*inicArbol()
 {
@@ -118,7 +119,7 @@ nodoArbol* nodomasizquierda(nodoArbol* arbol)
     }
           return aux;
 }
-/*
+
 void pasarDeArbolToLineaDeCajas(nodoArbol*arbol,caja cajero[])
 {
     int eleccion=0;
@@ -207,4 +208,4 @@ int cajacorrecta(persona p,caja cajero[],int i)
     }
     return resultado;
 }
-*/
+
