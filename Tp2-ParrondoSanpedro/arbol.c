@@ -194,11 +194,11 @@ void addtocaja(persona p,caja cajero[]) //acomoda hasta a 5
 int cajacorrecta(persona p,caja cajero[],int i)
 {
     int resultado=0;
-    if(cajero[i].tipo_pago==p.tipo_pago)
+    if(cajero[i].medioPago==p.medioPago)
     {
         resultado=1;
     }
-    else if(cajero[i].tipo_pago==3&&p.tipo_pago==3)
+    else if(cajero[i].medioPago==3&&p.medioPago==3)
     {
         resultado=1;
     }
