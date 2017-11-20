@@ -1,0 +1,86 @@
+# depslib dependency file v1.0
+1511205095 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	"arbol.h"
+	"lista.h"
+	"fila.h"
+	"caja.h"
+	"libreriamadre.h"
+
+1511204219 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\persona.h
+
+1511204561 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\arbol.h
+	"persona.h"
+	"fila.h"
+	"caja.h"
+
+1511204369 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\fila.h
+	"lista.h"
+	"persona.h"
+
+1511204486 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\lista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1511204072 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\caja.h
+	"fila.h"
+
+1511204569 c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\libreriamadre.h
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"arbol.h"
+	"string.h"
+	"caja.h"
+	"fila.h"
+	"persona.h"
+
+1511204145 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	"arbol.h"
+	"string.h"
+	"caja.h"
+	"fila.h"
+
+1511204043 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\caja.c
+	"caja.h"
+	"persona.h"
+
+1511205153 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"lista.h"
+	"persona.h"
+
+1511204474 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+	"lista.h"
+	"arbol.h"
+	"fila.h"
+	"caja.h"
+
+1511204834 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"arbol.h"
+	<string.h>
+	"caja.h"
+	"fila.h"
+	"persona.h"
+
+1511204282 source:c:\users\gay mas grande _janv\desktop\tp2sanpedroparrondo\persona.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	"caja.h"
+
