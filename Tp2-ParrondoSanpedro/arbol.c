@@ -187,7 +187,7 @@ void addtocaja(persona p,caja cajero[])
         }
         i++;
     }
-    cajero[flag]=agregarClienteACaja(cajero,p,flag);
+    //cajero[flag]=agregarClienteACaja(cajero,p,flag); ///Why this shit tiene un igual si es una funcion void
 }
 
 int cajacorrecta(persona p,caja cajero[],int i)

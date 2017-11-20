@@ -1,5 +1,7 @@
 #ifndef CAJA_H_INCLUDED
 #define CAJA_H_INCLUDED
+#include "fila.h"
+
 typedef struct
 {
         int nro_de_caja;
@@ -10,15 +12,32 @@ typedef struct
         Fila filita ;
 } caja;
 
-/*
-agregarCaja // crea una nueva caja en el arreglo
-abrirOcerrarCaja // abre o cierra una caja a requerimiento (si hay clientes no puede cerrarse)
-buscarCaja // busca una caja de acuerdo a su tipo de pago y la retorna (si es que está abierta)
-mostrarCaja // muestra la caja (sus datos) y toda la fila de clientes que esperan
-agregarClienteACaja // agrega un cliente a la caja de acuerdo al orden que plantea el algoritmo de planificación que aplica la caja, siempre y cuando la caja está abierta
-agregarClienteACajaEnTiempoDeterminado //
-atenderClientes // atiende a los clientes de acuerdo al algoritmo de planificación que aplica la caja, calculando el tiempo de espera de cada cliente
-*/
+int agregarCaja(caja cajero[],int dimension);
+void cargarCajas(caja cajero[],int i);
+void mostrarCajas(caja cajero[],int dimension);
+void leerCaja(caja cajero);
+void mostrarCajaPausado(caja cajero[],int posicion);
+void leerCajaPausado(caja cajero);
+void comprobar(int rta);
+void abriOcerrarCaja(caja cajero[],int i);
+void abrirTodasLasCajas(caja cajero[],int dimension);
+caja buscarCaja(caja cajero[],int dimension,int pago);
+void agregarClienteACaja(caja cajero[],persona p,int dimension);
+void planificador(caja cajero[],int i,persona p);
+void guardarCajasEnArchivo(caja cajero[],char nombre[],int dimension);
+void pasarArchivoAcajas(char nombre[],caja cajero[],int dimension);
+int atenderClientes(caja cajero[],int dimension);
+int sacarClientesDeCajas(caja cajero[],int i,int contador);
+int AtenderEnXTiempo(caja cajita,persona p,int tiempo);
+int calcularTiempoDeCaja(caja cajero[],int i,float  * tEjecucion,float * tRespuesta,int * totalEjecucion,int * totalRespuesta);
+void calcularTiemposTotales(caja cajero[],int dimension,float  * tEjecucion,float * tRespuesta,int * totalEjecucion,int * totalRespuesta);
+int contarTiempoProcesado(caja cajero);
+void MostrarDeterminadaCaja(caja cajita[]);
+void MeterPersona(caja cajita[],int dim);
+int ElegirEnCaja();
+void vaciarCajas(caja cajita[],int dim);
+
+
 
 
 #endif // CAJA_H_INCLUDED

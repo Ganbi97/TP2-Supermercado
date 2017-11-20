@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "cajas.h"
-#include "personas.h"
-#define quantum 5
+#include "caja.h"
+#include "persona.h"
+#define quantum 9
 
 int agregarCaja(caja cajero[],int dimension)
 {
@@ -32,7 +32,7 @@ void cargarCajas(caja cajero[],int i)
     fflush(stdin);
     gets(cajero[i].nombreCajero);
     printf("Ingrese el metodo de pago: 1(Efectivo), 2(Credito o Debito), 3(Todos) ");
-    scanf("%d",&cajero[i].tipo_pago);
+    scanf("%d",&cajero[i].medioPago);
     printf("Ingrese 1(Abierta) o 0(Cerrada): ");
     scanf("%d",&cajero[i].abiertaOcerrada);
     printf("Determine el algoritmo de planificacion: ");
@@ -57,7 +57,7 @@ void leerCaja(caja cajero)
 {
     printf("Numero de caja: %d\n",cajero.nro_de_caja);
     printf("Nombre del cajero: %s\n",cajero.nombreCajero);
-    printf("Tipo de pago: %d ",cajero.tipo_pago);tipodePago(cajero.tipo_pago);
+    printf("Tipo de pago: %d ",cajero.medioPago);tipodePago(cajero.medioPago);
     printf("%d",cajero.abiertaOcerrada);comprobar(cajero.abiertaOcerrada);
     printf("Algoritmo de planificacion: %s\n",cajero.algoritmoPlanificacion);
     printf("Personas: \n\n");
@@ -68,7 +68,7 @@ void leerCaja(caja cajero)
 
 void mostrarCajaPausado(caja cajero[],int posicion)
 {
-    nodo * aux=cajero[posicion].filita.cabecera;
+    nodo * aux=cajero[posicion].filita.inicio;
     leerCajaPausado(cajero[posicion]);
 }
 
@@ -76,7 +76,7 @@ void leerCajaPausado(caja cajero)
 {
     printf("Numero de caja: %d\n",cajero.nro_de_caja);
     printf("Nombre del cajero: %s\n",cajero.nombreCajero);
-    printf("Tipo de pago: %d ",cajero.tipo_pago);tipodePago(cajero.tipo_pago);
+    printf("Tipo de pago: %d ",cajero.medioPago);tipodePago(cajero.medioPago);
     printf("%d",cajero.abiertaOcerrada);comprobar(cajero.abiertaOcerrada);
     printf("Algoritmo de planificacion: %s\n",cajero.algoritmoPlanificacion);
     printf("Personas: \n\n");
@@ -131,7 +131,7 @@ caja buscarCaja(caja cajero[],int dimension,int pago)
     caja aux;
     while(i < dimension)
     {
-        if(pago == cajero[i].tipo_pago)
+        if(pago == cajero[i].medioPago)
         {
             aux=cajero[i];
         }
@@ -148,7 +148,7 @@ void agregarClienteACaja(caja cajero[],persona p,int dimension)
         cantidad=contarElementosFila(&cajero[i].filita);
         if((cajero[i].abiertaOcerrada == 1) && (cantidad < 6)) // cantidad es para que las cajas queden balanceadas
         {
-            if((cajero[i].tipo_pago == p.tipo_pago))
+            if((cajero[i].medioPago == p.medioPago))
             {
                 planificador(cajero,i,p);
                 control = 1;
@@ -281,7 +281,7 @@ int AtenderEnXTiempo(caja cajita,persona p,int tiempo)
     {
         if(cajita.abiertaOcerrada == 1)
     {
-        if(nuevo->cliente.tipo_pago == cajita.tipo_pago)
+        if(nuevo->cliente.medioPago == cajita.medioPago)
         {
             nodo * lista=cajita.filita.cabecera;
             nodo * aux=lista;
@@ -320,7 +320,7 @@ int AtenderEnXTiempo(caja cajita,persona p,int tiempo)
     {
         if(cajita.abiertaOcerrada == 1)
         {
-            if(nuevo->cliente.tipo_pago == cajita.tipo_pago)
+            if(nuevo->cliente.medioPago == cajita.medioPago)
             {
                 agregar(&cajita.filita,nuevo);
                 rta++;
