@@ -184,7 +184,7 @@ void MostrarArchivoCajas(char nombre[])
 persona encontrarPersona(char nombre[15])
 {
     persona aux;
-    persona respuesta=NULL;
+    persona respuesta;
     FILE *archivo=fopen(nombre,"rb");
     if(archivo)
     {

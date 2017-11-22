@@ -10,7 +10,7 @@
 #include "persona.h"
 
 void MENU(char nombre[],char cajeros[],nodoArbol *arbol,caja cajita[]);
-nodoArbol *opciones(int o,char nombre[],char archivo[],nodoArbol *arbol,caja cajita[]);
+nodoArbol *opciones(int o,char nombre[],char archivo[],nodoArbol *arbol,caja cajita[],int *bandera,int *control);
 void mostrarMenu();
 void submenuCaja();
 void submenuPersona();

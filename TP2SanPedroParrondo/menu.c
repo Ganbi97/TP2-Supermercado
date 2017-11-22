@@ -6,6 +6,7 @@
 #include "caja.h"
 #include "fila.h"
 #include "persona.h"
+#include "libreriamadre.h"
 #define dim 8
 /*
 nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja cajita[dim],int *bandera,int *control)
@@ -352,6 +353,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
     float tEjecucion = 0,tRespuesta = 0;
     int totalEjecucion = 0,totalRespuesta = 0,pos = 0,i = 0,posicion = 0,cont=0;
     char validacion;
+    persona borrada;
     printf("\n");
     int subopcion;
     switch(o)
@@ -437,7 +439,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                     printf("Ingrese el nombre de la persona a borrar: ");
                     fflush(stdin);
                     scanf("%s",&nomborr);
-                    persona borrada=encontrarPersona(nomborr);
+                    borrada=encontrarPersona(nomborr);
                     if(borrada)
                     {
                         arbol=borrarUnNodoArbol(arbol,borrada);
