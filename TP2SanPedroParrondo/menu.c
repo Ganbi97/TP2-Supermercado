@@ -7,7 +7,7 @@
 #include "fila.h"
 #include "persona.h"
 #define dim 8
-
+/*
 nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja cajita[dim],int *bandera,int *control)
 {
         float tEjecucion = 0,tRespuesta = 0;
@@ -326,7 +326,7 @@ void MENU(char nombre[],char cajeros[],nodoArbol * arbol,caja cajita[dim])
 
 void mostrarMenu()
 {
-    system ("color F");
+    system ("color B");
     printf("     ------------------Supermercado--------------------\n\n");
 
     printf("1)----> Mostrar archivo\n");
@@ -345,4 +345,241 @@ void mostrarMenu()
     printf("14)---> Calcular tiempo total\n\n");
 
     printf("15)---> SALIR\n");
+}
+*/
+nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja cajita[dim],int *bandera,int *control)
+{
+    float tEjecucion = 0,tRespuesta = 0;
+    int totalEjecucion = 0,totalRespuesta = 0,pos = 0,i = 0,posicion = 0,cont=0;
+    char validacion;
+    printf("\n");
+    int subopcion;
+    switch(o)
+    {
+    case 1:
+        subopcion=0;
+        system("cls");
+        while(subopcion!=4)
+        {
+            submenuPersona();
+            printf("\n");
+            printf("Eliga una opcion: ");
+            fflush(stdin);
+            scanf("%d",&subopcion);
+            switch(subopcion)
+            {
+            case 1:
+                system("cls");
+                AgregarPersonas(nombre);
+                system("pause");
+                system("cls");
+                break;
+            case 2:
+                system("cls");
+                MostrarArchivo(nombre);
+                system("pause");
+                system("cls");
+                break;
+            case 3:
+                system("cls");
+                if(!arbol)
+                {
+                    arbol=pasarArchivoArbol(arbol,nombre);
+                    printf("Los datos se pasaron exitosamente\n");
+                    system("pause");
+                    system("cls");
+                }
+                else
+                {
+                    printf("El arbol se encuentra cargado\n");
+                    system("pause");
+                    system("cls");
+                }
+                break;
+            }
+            printf("\n");
+        }
+        break;
+    case 2:
+        subopcion=0;
+        system("cls");
+        while(subopcion!=4)
+        {
+            submenuArbol();
+            printf("\n");
+            printf("Eliga una opcion: ");
+            fflush(stdin);
+            scanf("%d",&subopcion);
+            switch(subopcion)
+            {
+            case 1:
+                system("cls");
+                if(arbol)
+                {
+                    modosDeMuestraDelArbol(arbol);
+                    system("pause");
+                    system("cls");
+                }
+
+                else
+                {
+                    printf("Cargue el arbol primero\n");
+                    system("pause");
+                    system("cls");
+                }
+                break;
+            case 2:
+                system("cls");
+                if(arbol)
+                {
+                    MostrarArchivo(nombre);
+                    char nomborr[30];
+                    printf("Ingrese el nombre de la persona a borrar: ");
+                    fflush(stdin);
+                    scanf("%s",&nomborr);
+                    persona borrada=encontrarPersona(nomborr);
+                    if(borrada)
+                    {
+                        arbol=borrarUnNodoArbol(arbol,borrada);
+                        printf("\nDone!\n");
+                        system("pause");
+                    }
+                    else
+                    {
+                        printf("\nEsa persona no existe\n");
+                        system("pause");
+                    }
+                    system("pause");
+                    system("cls");
+                }
+
+                else
+                {
+                    printf("Cargue el arbol primero\n");
+                    system("pause");
+                    system("cls");
+                }
+                break;
+            case 3:
+                system("cls");
+                if(!arbol)
+                {
+                    if(!arbol)
+                    {
+                        printf("El arbol no esta cargado\n");
+                        system("pause");
+                        system("cls");
+                    }
+
+                }
+                else
+                {
+                    if(*control==0)
+                    {
+                        cont=ElegirModoDePasarPersonasAlArreglo(arbol,cajita);
+                        printf("Se cargaron %d clientes correctamente\n",cont);
+                        *control=1;
+                    }
+                    else
+                    {
+                        *control=1;
+                        vaciarCajas(cajita,8);
+                        cont=ElegirModoDePasarPersonasAlArreglo(arbol,cajita);
+                        printf("Se cargaron %d clientes correctamente\n",cont);
+                        *control=0;
+                    }
+                    system("pause");
+                    system("cls");
+                }
+                break;
+            }
+            printf("\n");
+        }
+        break;
+    case 3:
+        subopcion=0;
+        system("cls");
+        while(subopcion!=8)
+        {
+            submenuCaja();
+            printf("\n");
+            printf("Eliga una opcion: ");
+            fflush(stdin);
+            scanf("%d",&subopcion);
+            switch(subopcion)
+            {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            }
+            printf("\n");
+        }
+        break;
+    }
+    return arbol;
+}
+
+
+void MENU(char nombre[],char cajeros[],nodoArbol * arbol,caja cajita[dim])
+{
+    int bandera=0,control=0;
+    int opcion=0;
+    printf("\n");
+    while(opcion != 4)
+    {
+        mostrarMenu();
+        printf("\n");
+        printf("Eliga una opcion: ");
+        fflush(stdin);
+        scanf("%d",&opcion);
+        arbol=opciones(opcion,nombre,cajeros,arbol,cajita,&bandera,&control);
+        printf("\n");
+    }
+    system("cls");
+    printf("\nGood Bye!\n");
+}
+
+void mostrarMenu()
+{
+    system("color B");
+    printf("     -------------Supermercado-Nueva-Luna(ah-re-chino)-------------    \n\n");
+    printf("[1]Administrar Personas\n");
+    printf("[2]Administrar Arbol\n");
+    printf("[3]Administrar Cajas\n");
+    printf("\n\n[4]SALIR\n");
+}
+
+void submenuArbol()
+{
+    printf("[1]Ver arbol\n");
+    printf("[2]Borrar un Arbol\n");
+    printf("[3]Pasar del arbol a las cajas\n");
+    printf("\n\n[4]SALIR\n");
+}
+
+void submenuPersona()
+{
+    printf("[1]Agregar persona\n");
+    printf("[2]Ver archivo de personas\n");
+    printf("[3]Pasar del archivo al arbol\n");
+    printf("\n\n[4]SALIR\n");
+}
+
+void submenuCaja()
+{
+    printf("[1]Abrir todas las cajas\n");
+    printf("[2]Abrir/cerrar caja especifica\n");
+    printf("[3]Mostrar cajas\n");
+    printf("--------------------------------------\n");
+    printf("[4]Agregar clientes en x tiempo\n");
+    printf("[5]Procesar colas\n");
+    printf("[6]Procesar colas individualmente\n");
+    printf("[7]Calcular tiempo individual\n");
+    printf("[8]Calcular tiempo total\n");
+    printf("\n\n[9]SALIR\n");
 }

@@ -84,3 +84,88 @@
 	"persona.h"
 	"caja.h"
 
+1511335941 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	"arbol.h"
+	"lista.h"
+	"fila.h"
+	"caja.h"
+	"libreriamadre.h"
+
+1511339919 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.h
+
+1511187770 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.h
+	"persona.h"
+	"fila.h"
+	"caja.h"
+
+1511187770 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\fila.h
+	"lista.h"
+	"persona.h"
+
+1511187770 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\lista.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1511187770 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\caja.h
+	"fila.h"
+
+1511339919 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\libreriamadre.h
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"arbol.h"
+	"string.h"
+	"caja.h"
+	"fila.h"
+	"persona.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.c
+	<stdio.h>
+	<stdlib.h>
+	"arbol.h"
+	"string.h"
+	"caja.h"
+	"fila.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\caja.c
+	"caja.h"
+	"persona.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+	"lista.h"
+	"persona.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+	"lista.h"
+	"arbol.h"
+	"fila.h"
+	"caja.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+	"arbol.h"
+	<string.h>
+	"caja.h"
+	"fila.h"
+	"persona.h"
+
+1511187770 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	"caja.h"
+

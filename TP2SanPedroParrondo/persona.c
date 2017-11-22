@@ -180,3 +180,26 @@ void MostrarArchivoCajas(char nombre[])
     fclose(archivo);
 
 }
+
+persona encontrarPersona(char nombre[15])
+{
+    persona aux;
+    persona respuesta=NULL;
+    FILE *archivo=fopen(nombre,"rb");
+    if(archivo)
+    {
+          while(fread(&aux,sizeof(persona),1,archivo)>0)
+          {
+              if(strcmpi(nombre,aux.nombreApellido)==0)
+              {
+                  respuesta=aux;
+              }
+          }
+    }
+    else
+    {
+        printf("No se puede abrir el archivo\n");
+    }
+    fclose(archivo);
+    return respuesta;
+}
