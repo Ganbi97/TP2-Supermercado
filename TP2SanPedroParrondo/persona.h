@@ -18,6 +18,6 @@ void MostrarCliente(persona p);
 int VerificacionCliente();
 int VerificacionDePago();
 persona CrearPersona();
-persona encontrarPersona(char nombre[15]);
+//persona encontrarPersona(char nombre[15]);
 
 #endif // PERSONA_H_INCLUDED

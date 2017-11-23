@@ -181,7 +181,7 @@ void MostrarArchivoCajas(char nombre[])
 
 }
 
-persona encontrarPersona(char nombre[15])
+/*persona encontrarPersona(char nombre[15])
 {
     persona aux;
     persona respuesta;
@@ -202,4 +202,4 @@ persona encontrarPersona(char nombre[15])
     }
     fclose(archivo);
     return respuesta;
-}
+^*/

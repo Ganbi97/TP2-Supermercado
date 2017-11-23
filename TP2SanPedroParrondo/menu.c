@@ -431,7 +431,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 }
                 break;
             case 2:
-                system("cls");
+                /*system("cls");
                 if(arbol)
                 {
                     MostrarArchivo(nombre);
@@ -461,7 +461,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                     system("pause");
                     system("cls");
                 }
-                break;
+                break;*/
             case 3:
                 system("cls");
                 if(!arbol)
