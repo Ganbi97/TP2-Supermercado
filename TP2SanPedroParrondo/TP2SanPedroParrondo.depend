@@ -96,7 +96,7 @@
 
 1511482115 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.h
 
-1511482894 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.h
+1511484034 c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.h
 	"persona.h"
 	"fila.h"
 	"caja.h"
@@ -124,7 +124,7 @@
 	"fila.h"
 	"persona.h"
 
-1511482139 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.c
+1511484034 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.c
 	<stdio.h>
 	<stdlib.h>
 	"arbol.h"
@@ -153,7 +153,7 @@
 	"fila.h"
 	"caja.h"
 
-1511481975 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\menu.c
+1511484034 source:c:\users\daevorn\documents\github\tp2-supermercado\tp2sanpedroparrondo\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"lista.h"

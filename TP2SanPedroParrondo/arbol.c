@@ -329,21 +329,9 @@ int ElegirModoDePasarPersonasAlArreglo(nodoArbol * arbol,caja cajita[])
     return contador;
 }
 
-nodoArbol* buscarNodoArbol(nodoArbol*arbol,char nombre[])
+persona crearPaborrar(char nombrr[])
 {
-    nodoArbol*aux=arbol;
-    if(arbol)
-    {
-        if(strcmp(nombre,arbol->p.nombre)==0)
-        {
-            aux=arbol;
-        }
-        else
-        {
-            arbol=buscarNodoArbol(arbol->der,nombre);
-            arbol=buscarNodoArbol(arbol->izq,nombre);
-        }
-
-    }
+    persona aux;
+    strcpy(aux.nombre,nombrr);
     return aux;
 }

@@ -436,12 +436,12 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 {
                     MostrarPosOrden(arbol);
                     char nomborr[30];
-                    nodoArbol* aux;
+                    persona aux;
                     printf("Ingrese el nombre de la persona a borrar: ");
                     fflush(stdin);
                     scanf("%s",&nomborr);
-                    aux=buscarNodoArbol(arbol,nomborr);
-                    arbol=borrarUnNodoArbol(arbol,aux->p);
+                    aux=crearPaborrar(nomborr);
+                    arbol=borrarUnNodoArbol(arbol,aux);
                     mostrarArbol(arbol);
                 }
 

@@ -17,7 +17,6 @@ nodoArbol * nodoMasDerecho(nodoArbol * arbol);
 nodoArbol * nodoMasIzquierdo(nodoArbol * arbol);
 nodoArbol * borrarUnNodoArbol(nodoArbol * arbol,persona a);
 nodoArbol * pasarArchivoArbol(nodoArbol * arbol,char nombre[]);
-nodoArbol * buscarNodoArbol(nodoArbol*arbol,char nombre[]);
 void elegirOrden(nodoArbol * arbol,Fila * filita,int elegir);
 int pasarDeArbolToLineaDeCajas(nodoArbol * arbol,caja cajero[],int dimension,int elegir);
 void preOrden(nodoArbol * aux,Fila * filita);
@@ -31,5 +30,6 @@ void MostrarInOrden(nodoArbol * aux);
 void MostrarPosOrden(nodoArbol * aux);
 void modosDeMuestraDelArbol(nodoArbol * arbol);
 int ElegirModoDePasarPersonasAlArreglo(nodoArbol * arbol,caja cajita[]);
+persona crearPaborrar(char nombrr[]);
 
 #endif // ARBOL_H_INCLUDED
