@@ -15,6 +15,7 @@ nodoArbol * crearNodoArbol(persona a)
     nodoArbol * aux=malloc(sizeof(nodoArbol));
 
     strcpy(aux->p.nombre,a.nombre);
+    strcpy(aux->p.apellido,a.apellido);
     aux->p.cantArticulos=a.cantArticulos;
     aux->p.tiempoDeEspera=a.tiempoDeEspera;
     aux->p.tiempoProcesado=a.tiempoProcesado;

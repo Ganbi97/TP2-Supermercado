@@ -512,6 +512,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
             printf("\n");
         }
         break;
+        system("cls");
     }
     return arbol;
 }
