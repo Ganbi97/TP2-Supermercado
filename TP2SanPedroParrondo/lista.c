@@ -136,7 +136,7 @@ void mostrarListaPausado(nodo * Lista)
 
 void mostrarNodo(persona cliente)
 {
-    printf("Nombre Y Apellido: %s\n",cliente.nombreApellido);
+    printf("Nombre Y Apellido: %s\n",cliente.nombre);
     printf("Cantidad de articulos: %d\n",cliente.cantArticulos);
     printf("Tiempo de espera: %d\n",cliente.tiempoDeEspera);
     printf("Tiempo de procesado: %d\n",cliente.tiempoProcesado);
@@ -149,7 +149,7 @@ nodo * borrarNodo(nodo * Lista,char nombre[])
 {
     nodo * seg;
     nodo * ante;
-    if((Lista) && strcmp(Lista->cliente.nombreApellido,nombre) ==0)
+    if((Lista) && strcmp(Lista->cliente.nombre,nombre) ==0)
     {
         nodo * aux=Lista;
         Lista=Lista->siguiente;
@@ -160,7 +160,7 @@ nodo * borrarNodo(nodo * Lista,char nombre[])
     else
     {
         seg=Lista;
-        while((seg) && (strcmp(seg->cliente.nombreApellido,nombre) != 0 ))
+        while((seg) && (strcmp(seg->cliente.nombre,nombre) != 0 ))
         {
             ante=seg;
             seg=seg->siguiente;

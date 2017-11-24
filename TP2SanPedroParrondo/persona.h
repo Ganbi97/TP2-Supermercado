@@ -3,7 +3,8 @@
 
 typedef struct
 {
-    char nombreApellido [40];
+    char nombre[40];
+    char apellido[40];
     int cantArticulos;                // es el tiempo de ejecución
     int tiempoDeEspera;             // es el tiempo de respuesta
     int tiempoProcesado;          // es el tiempo que ya fue procesado en la línea de caja

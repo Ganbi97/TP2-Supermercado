@@ -14,7 +14,7 @@ nodoArbol * crearNodoArbol(persona a)
 {
     nodoArbol * aux=malloc(sizeof(nodoArbol));
 
-    strcpy(aux->p.nombreApellido,a.nombreApellido);
+    strcpy(aux->p.nombre,a.nombre);
     aux->p.cantArticulos=a.cantArticulos;
     aux->p.tiempoDeEspera=a.tiempoDeEspera;
     aux->p.tiempoProcesado=a.tiempoProcesado;
@@ -30,7 +30,7 @@ nodoArbol * insertarNodoArbol(nodoArbol * arbol,persona nueva)
     if(!arbol) arbol=crearNodoArbol(nueva);
     else
     {
-        if(strcmpi(nueva.nombreApellido,arbol->p.nombreApellido) < 0)
+        if(strcmpi(nueva.nombre,arbol->p.nombre) < 0)
         {
             arbol->izq=insertarNodoArbol(arbol->izq,nueva);
         }
@@ -46,12 +46,15 @@ void mostrarArbol(nodoArbol * aux)
 {
     if(aux)
     {
-        printf("Nombre y Apellido: %s\n",aux->p.nombreApellido);
+        printf("Nombre y Apellido: %s",aux->p.nombre);
+        printf(" %s\n",aux->p.apellido);
         printf("Cantidad Articulos: %d\n",aux->p.cantArticulos);
         printf("Tiempo de espera: %d\n",aux->p.tiempoDeEspera);
         printf("Tiempo de procesado: %d\n",aux->p.tiempoProcesado);
-        printf("Tipo de cliente: %d",aux->p.tipo_cliente);tipodeCliente(aux->p.tipo_cliente);
-        printf("Tipo de pago: %d",aux->p.tipo_pago);tipodePago(aux->p.tipo_pago);
+        printf("Tipo de cliente: %d",aux->p.tipo_cliente);
+        tipodeCliente(aux->p.tipo_cliente);
+        printf("Tipo de pago: %d",aux->p.tipo_pago);
+        tipodePago(aux->p.tipo_pago);
         puts("-------------------------");
     }
 }
@@ -71,7 +74,7 @@ void MostrarInOrden(nodoArbol * aux)
     if(aux)
     {
         MostrarpreOrden(aux->izq);
-         mostrarArbol(aux);
+        mostrarArbol(aux);
         MostrarpreOrden(aux->der);
     }
 }
@@ -170,11 +173,11 @@ nodoArbol * borrarUnNodoArbol(nodoArbol * arbol,persona a)
 {
     if(arbol)
     {
-        if(strcmpi(a.nombreApellido,arbol->p.nombreApellido) > 0)
+        if(strcmpi(a.nombre,arbol->p.nombre) > 0)
         {
             arbol->der=borrarUnNodoArbol(arbol->der,a);
         }
-        else if (strcmpi(a.nombreApellido,arbol->p.nombreApellido) < 0)
+        else if (strcmpi(a.nombre,arbol->p.nombre) < 0)
         {
             arbol->izq=borrarUnNodoArbol(arbol->izq,a);
         }
@@ -221,16 +224,16 @@ void elegirOrden(nodoArbol * arbol,Fila * filita,int elegir)
 {
     switch(elegir)
     {
-        case 1:
-            preOrden(arbol,filita);
+    case 1:
+        preOrden(arbol,filita);
         break;
 
-        case 2:
-            inOrden(arbol,filita);
+    case 2:
+        inOrden(arbol,filita);
         break;
 
-        case 3:
-            posOrden(arbol,filita);
+    case 3:
+        posOrden(arbol,filita);
         break;
     }
 }
@@ -243,7 +246,7 @@ nodoArbol * pasarArchivoArbol(nodoArbol * arbol,char nombre[])
     {
         while((fread(&aux,sizeof(persona),1,archi)) > 0 )
         {
-           arbol=insertarNodoArbol(arbol,aux);
+            arbol=insertarNodoArbol(arbol,aux);
         }
     }
     fclose(archi);
@@ -253,75 +256,94 @@ nodoArbol * pasarArchivoArbol(nodoArbol * arbol,char nombre[])
 void modosDeMuestraDelArbol(nodoArbol * arbol)
 {
     int opcion=0;
-        printf("  Seleccione el modo de mostrar el arbol\n");
-        printf("    1)----->Inorden\n");
-        printf("    2)----->Preorden\n");
-        printf("    3)----->PosOrden\n");
-        printf("    Opcion:");
+    printf("  Seleccione el modo de mostrar el arbol\n");
+    printf("    1)----->Inorden\n");
+    printf("    2)----->Preorden\n");
+    printf("    3)----->PosOrden\n");
+    printf("    Opcion:");
+    fflush(stdin);
+    scanf("%d",&opcion);
+    while((opcion < 1) || (opcion > 3))
+    {
+        printf("El valor ingresado no coincide\n");
+        printf("Por favor, ingrese nuevamente: ");
         fflush(stdin);
         scanf("%d",&opcion);
-        while((opcion < 1) || (opcion > 3))
-        {
-            printf("El valor ingresado no coincide\n");
-            printf("Por favor, ingrese nuevamente: ");
-            fflush(stdin);
-            scanf("%d",&opcion);
-        }
+    }
 
-        switch(opcion)
-        {
-        case 1:
-            MostrarInOrden(arbol);
-            break;
+    switch(opcion)
+    {
+    case 1:
+        MostrarInOrden(arbol);
+        break;
 
-        case 2:
-            MostrarpreOrden(arbol);
-            break;
+    case 2:
+        MostrarpreOrden(arbol);
+        break;
 
-        case 3:
-            MostrarPosOrden(arbol);
-            break;
-        }
+    case 3:
+        MostrarPosOrden(arbol);
+        break;
+    }
 }
 
 int ElegirModoDePasarPersonasAlArreglo(nodoArbol * arbol,caja cajita[])
 {
     int opcion=0,contador=0;
 
-        printf("  Seleccione el modo de cargar el arbol\n");
-        printf("    1)----->Inorden\n");
-        printf("    2)----->Preorden\n");
-        printf("    3)----->PosOrden\n");
-        printf("    Opcion:");
+    printf("  Seleccione el modo de cargar el arbol\n");
+    printf("    1)----->Inorden\n");
+    printf("    2)----->Preorden\n");
+    printf("    3)----->PosOrden\n");
+    printf("    Opcion:");
+    fflush(stdin);
+    scanf("%d",&opcion);
+
+    while(((opcion < 1) || (opcion > 3)))
+    {
+        printf("El valor ingresado no coincide\n");
+        printf("Por favor, ingrese nuevamente: ");
         fflush(stdin);
         scanf("%d",&opcion);
+    }
 
-        while(((opcion < 1) || (opcion > 3)))
+    switch(opcion)
+    {
+    case 1:
+        printf("Las personas se han cargado exitosamente a las cajas\n");
+        contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,1);
+        break;
+
+    case 2:
+        printf("Las personas se han cargado exitosamente a las cajas\n");
+        contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,2);
+        break;
+
+    case 3:
+        printf("Las personas se han cargado exitosamente a las cajas\n");
+        contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,3);
+        break;
+
+    }
+
+    return contador;
+}
+
+nodoArbol* buscarNodoArbol(nodoArbol*arbol,char nombre[])
+{
+    nodoArbol*aux=arbol;
+    if(arbol)
+    {
+        if(strcmp(nombre,arbol->p.nombre)==0)
         {
-            printf("El valor ingresado no coincide\n");
-            printf("Por favor, ingrese nuevamente: ");
-            fflush(stdin);
-            scanf("%d",&opcion);
+            aux=arbol;
+        }
+        else
+        {
+            arbol=buscarNodoArbol(arbol->der,nombre);
+            arbol=buscarNodoArbol(arbol->izq,nombre);
         }
 
-        switch(opcion)
-        {
-        case 1:
-            printf("Las personas se han cargado exitosamente a las cajas\n");
-            contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,1);
-            break;
-
-        case 2:
-            printf("Las personas se han cargado exitosamente a las cajas\n");
-            contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,2);
-            break;
-
-        case 3:
-            printf("Las personas se han cargado exitosamente a las cajas\n");
-            contador=pasarDeArbolToLineaDeCajas(arbol,cajita,dim,3);
-            break;
-
-        }
-
-        return contador;
+    }
+    return aux;
 }

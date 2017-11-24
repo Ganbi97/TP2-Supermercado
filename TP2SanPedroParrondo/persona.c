@@ -85,7 +85,8 @@ void AgregarPersonas(char nombre[])
 
 void MostrarCliente(persona p)
 {
-    printf("Nombre y Apellido: %s\n",p.nombreApellido);
+    printf("Nombre y apellido: %s",p.nombre);
+    printf(" %s\n",p.apellido);
     printf("Cantidad de articulos: %d\n",p.cantArticulos);
     printf("Tiempo de espera: %d\n",p.tiempoDeEspera);
     printf("Tiempo de procesado: %d\n",p.tiempoProcesado);
@@ -137,10 +138,12 @@ int VerificacionDePago()
 persona CrearPersona()
 {
     persona p;
-    printf("Ingrese el nombre y apellido: ");
+    printf("Ingrese el nombre: ");
     fflush(stdin);
-    gets(p.nombreApellido);
-
+    gets(p.nombre);
+    printf("Ingrese el apellido: ");
+    fflush(stdin);
+    gets(p.apellido);
     printf("Ingrese la cantidad de articulos: ");
     fflush(stdin);
     scanf("%d",&p.cantArticulos);
@@ -190,7 +193,7 @@ void MostrarArchivoCajas(char nombre[])
     {
           while(fread(&aux,sizeof(persona),1,archivo)>0)
           {
-              if(strcmpi(nombre,aux.nombreApellido)==0)
+              if(strcmpi(nombre,aux.nombre)==0)
               {
                   respuesta=aux;
               }

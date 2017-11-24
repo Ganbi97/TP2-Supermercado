@@ -431,28 +431,18 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 }
                 break;
             case 2:
-                /*system("cls");
+                system("cls");
                 if(arbol)
                 {
-                    MostrarArchivo(nombre);
+                    MostrarPosOrden(arbol);
                     char nomborr[30];
+                    nodoArbol* aux;
                     printf("Ingrese el nombre de la persona a borrar: ");
                     fflush(stdin);
                     scanf("%s",&nomborr);
-                    borrada=encontrarPersona(nomborr);
-                    if(borrada)
-                    {
-                        arbol=borrarUnNodoArbol(arbol,borrada);
-                        printf("\nDone!\n");
-                        system("pause");
-                    }
-                    else
-                    {
-                        printf("\nEsa persona no existe\n");
-                        system("pause");
-                    }
-                    system("pause");
-                    system("cls");
+                    aux=buscarNodoArbol(arbol,nomborr);
+                    arbol=borrarUnNodoArbol(arbol,aux->p);
+                    mostrarArbol(arbol);
                 }
 
                 else
@@ -461,7 +451,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                     system("pause");
                     system("cls");
                 }
-                break;*/
+                break;
             case 3:
                 system("cls");
                 if(!arbol)
