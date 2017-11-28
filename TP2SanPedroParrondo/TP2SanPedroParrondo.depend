@@ -170,7 +170,7 @@
 	"persona.h"
 	"caja.h"
 
-1511204145 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.c
+1511661274 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.c
 	<stdio.h>
 	<stdlib.h>
 	"arbol.h"
@@ -178,12 +178,12 @@
 	"caja.h"
 	"fila.h"
 
-1511204561 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.h
+1511661274 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\arbol.h
 	"persona.h"
 	"fila.h"
 	"caja.h"
 
-1511397494 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.h
+1511661280 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.h
 
 1511204369 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\fila.h
 	"lista.h"
@@ -209,7 +209,7 @@
 	"lista.h"
 	"persona.h"
 
-1511204474 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\lista.c
+1511661280 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\lista.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -239,7 +239,7 @@
 	"fila.h"
 	"persona.h"
 
-1511385510 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\menu.c
+1511661280 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\menu.c
 	<stdio.h>
 	<stdlib.h>
 	"lista.h"
@@ -248,8 +248,9 @@
 	"caja.h"
 	"fila.h"
 	"persona.h"
+	"libreriamadre.h"
 
-1511385608 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.c
+1511661280 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\persona.c
 	<stdio.h>
 	<stdlib.h>
 	"persona.h"
