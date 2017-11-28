@@ -87,7 +87,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
 
                 else
                 {
-                    printf("Cargue el arbol primero\n");
+                    printf("Cargue el arbol primero(Administrar personas/opcion 3)\n");
                     system("pause");
                     system("cls");
                 }
@@ -109,7 +109,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
 
                 else
                 {
-                    printf("Cargue el arbol primero\n");
+                    printf("Cargue el arbol primero(Administrar personas/opcion 3)\n");
                     system("pause");
                     system("cls");
                 }
@@ -120,13 +120,13 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 {
                     if(!arbol)
                     {
-                        printf("El arbol no esta cargado\n");
+                        printf("El arbol no esta cargado(Administrar personas/opcion 3)\n");
                         system("pause");
                         system("cls");
                     }
                     if(*bandera == 0)
                     {
-                        printf("Las cajas no estan cargadas\n");
+                        printf("Las cajas no estan cargadas(administrar cajas, opcion 1)\n");
                         system("pause");
                         system("cls");
                     }
@@ -181,7 +181,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 system("cls");
                 if(*bandera == 0)
                 {
-                    printf("Los cajeros no estan cargados\n");
+                    printf("Los cajeros no estan cargados(administrar cajas, opcion 1)\n");
                     system("pause");
                     system("cls");
                 }
@@ -199,13 +199,13 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 {
                     if(!arbol)
                     {
-                        printf("El arbol no esta cargado\n");
+                        printf("El arbol no esta cargado(Administrar personas/opcion 3)\n");
                         system("pause");
                         system("cls");
                     }
                     if(*bandera == 0)
                     {
-                        printf("Las cajas no estan cargadas\n");
+                        printf("Las cajas no estan cargadas(administrar cajas, opcion 1)\n");
                         system("pause");
                         system("cls");
                     }
@@ -235,7 +235,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 system("cls");
                 if(*bandera == 0)
                 {
-                    printf("Por favor, cargue los datos del archivo al arreglo\n");
+                    printf("Por favor, cargue los datos del archivo al arreglo(administrar cajas, opcion 1)\n");
                     system("pause");
                     system("cls");
                 }
@@ -251,7 +251,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 system("cls");
                 if(*bandera == 0)
                 {
-                    printf("Por favor, cargue los datos del archivo al arreglo\n");
+                    printf("Por favor, cargue los datos del archivo al arreglo(administrar cajas, opcion 1)\n");
                     system("pause");
                     system("cls");
                 }
@@ -269,14 +269,14 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 {
                     if ( *bandera==0 )
                     {
-                        printf("Por favor, cargue los datos del archivo al arreglo\n");
+                        printf("Por favor, cargue los datos del archivo al arreglo(administrar cajas, opcion 1)\n");
                         system("pause");
                         system("cls");
                     }
 
                     if(cajita[0].abiertaOcerrada!=1)
                     {
-                        printf("Las cajas estan cerradas\n");
+                        printf("Las cajas estan cerradas(administrar cajas, opcion 2/3)\n");
                         system("pause");
                         system("cls");
                     }
@@ -295,7 +295,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 {
                     if (*bandera == 0)
                     {
-                        printf("Por favor, cargue los datos del archivo al arreglo\n");
+                        printf("Por favor, cargue los datos del archivo al arreglo(administrar cajas, opcion 1)\n");
                         system("pause");
                         system("cls");
                     }
@@ -343,7 +343,7 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
                 system("cls");
                 if(*bandera  == 0)
                 {
-                    printf("Los cajeros no estan cargados\n");
+                    printf("Los cajeros no estan cargados(administrar cajas, opcion 1)\n");
                     system("pause");
                     system("cls");
                 }
