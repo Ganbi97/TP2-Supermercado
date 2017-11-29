@@ -219,7 +219,7 @@
 	"fila.h"
 	"caja.h"
 
-1511205095 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\main.c
+1511957400 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\main.c
 	<stdio.h>
 	<stdlib.h>
 	"persona.h"
@@ -227,6 +227,7 @@
 	"lista.h"
 	"fila.h"
 	"caja.h"
+	"usuario.h"
 	"libreriamadre.h"
 
 1511385994 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\libreriamadre.h
@@ -255,4 +256,15 @@
 	<stdlib.h>
 	"persona.h"
 	"caja.h"
+
+1511957336 c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\usuario.h
+
+1511957380 source:c:\users\gay mas grande _janv\documents\github\tp2-supermercado\tp2sanpedroparrondo\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<stdlib.h>
+	<conio.h>
+	"usuario.h"
 
