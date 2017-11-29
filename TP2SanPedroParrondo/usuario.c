@@ -239,6 +239,9 @@ void login (char arch_usr[])
     int contrasenia_valida=0, nombre_valido=0, cont=0;
 
     char password[11]="";
+    int bandera=0;
+while(bandera==0)
+{
 
     if (archi_2)
     {
@@ -277,9 +280,9 @@ void login (char arch_usr[])
                     if (strcmp(pass_ingresado, password)==0)
                     {
                         contrasenia_valida=1;
-
-                        //system("cls");
+                        bandera=1;
                         printf("\nBIENVENIDO...");
+
                     }
                 }
             }
@@ -302,6 +305,7 @@ void login (char arch_usr[])
 
     if (nombre_valido==0)
         printf("\nNOMBRE DE USUARIO INEXISTENTE\n ");
+}
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

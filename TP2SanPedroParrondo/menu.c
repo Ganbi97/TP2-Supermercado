@@ -389,7 +389,7 @@ void MENU(char nombre[],char cajeros[],nodoArbol * arbol,caja cajita[dim])
 void mostrarMenu()
 {
     system("color B");
-    printf("     -------------Supermercado-Nueva-Luna(ah-re-chino)-------------    \n\n");
+    printf("     -------------Supermercado Nueva Luna(ah re chino)-------------    \n\n");
     printf("[1]Administrar Personas\n");
     printf("[2]Administrar Arbol\n");
     printf("[3]Administrar Cajas\n");
