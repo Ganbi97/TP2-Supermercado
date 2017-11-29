@@ -14,8 +14,6 @@ nodoArbol * opciones(int o,char nombre[],char archivo[],nodoArbol * arbol,caja c
     float tEjecucion = 0,tRespuesta = 0;
     int totalEjecucion = 0,totalRespuesta = 0,pos = 0,i = 0,posicion = 0,cont=0;
     char validacion;
-    persona borrada;
-    pasarArchivoAcajas(archivo,cajita,dim);
     printf("\n");
     int subopcion;
     switch(o)
